@@ -1,4 +1,4 @@
-import { FC, Fragment } from 'react'
+import React, { FC, Fragment } from 'react'
 import { Navbar, ActiveLink } from '../app'
 interface Props {}
 const Home: FC<Props> = () => {

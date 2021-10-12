@@ -3278,6 +3278,7 @@ __export(exports, {
 });
 
 // src/app/components/Navbar.tsx
+var React = __toModule(require("react"));
 var Navbar = (_a) => {
   var _b = _a, { children } = _b, props = __objRest(_b, ["children"]);
   return /* @__PURE__ */ React.createElement("ul", __spreadValues({}, props), children);
@@ -3287,6 +3288,7 @@ var Navbar = (_a) => {
 var import_router = __toModule(require_router3());
 var import_link = __toModule(require_link2());
 var import_react = __toModule(require("react"));
+var React2 = __toModule(require("react"));
 var ActiveLink = (_a) => {
   var _b = _a, {
     children
@@ -3298,11 +3300,11 @@ var ActiveLink = (_a) => {
   const childClassName = child.props.className || "";
   const activeClassName = "active";
   const className = pathname === props.href || asPath === props.as ? activeClassName : "";
-  return /* @__PURE__ */ import_react.default.createElement("li", {
+  return /* @__PURE__ */ React2.createElement("li", {
     className
-  }, /* @__PURE__ */ import_react.default.createElement(import_link.default, __spreadValues({
+  }, /* @__PURE__ */ React2.createElement(import_link.default, __spreadValues({
     href: props.href
-  }, props), import_react.default.cloneElement(child, {
+  }, props), React2.cloneElement(child, {
     className: childClassName || null
   })));
 };

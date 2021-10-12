@@ -3274,15 +3274,22 @@ var require_link2 = __commonJS({
 });
 
 // src/app/components/Navbar.tsx
+import {
+  createElement
+} from "react";
 var Navbar = (_a) => {
   var _b = _a, { children } = _b, props = __objRest(_b, ["children"]);
-  return /* @__PURE__ */ React.createElement("ul", __spreadValues({}, props), children);
+  return /* @__PURE__ */ createElement("ul", __spreadValues({}, props), children);
 };
 
 // src/app/components/ActiveLink.tsx
 var import_router = __toModule(require_router3());
 var import_link = __toModule(require_link2());
-import React2, { Children } from "react";
+import { Children } from "react";
+import {
+  cloneElement,
+  createElement as createElement2
+} from "react";
 var ActiveLink = (_a) => {
   var _b = _a, {
     children
@@ -3294,11 +3301,11 @@ var ActiveLink = (_a) => {
   const childClassName = child.props.className || "";
   const activeClassName = "active";
   const className = pathname === props.href || asPath === props.as ? activeClassName : "";
-  return /* @__PURE__ */ React2.createElement("li", {
+  return /* @__PURE__ */ createElement2("li", {
     className
-  }, /* @__PURE__ */ React2.createElement(import_link.default, __spreadValues({
+  }, /* @__PURE__ */ createElement2(import_link.default, __spreadValues({
     href: props.href
-  }, props), React2.cloneElement(child, {
+  }, props), cloneElement(child, {
     className: childClassName || null
   })));
 };
