@@ -1,22 +1,32 @@
 {
   "compilerOptions": {
+    "strict": true,
     "target": "es6",
     "declarationDir": "./dist/types",
-    "declaration"   : true,
+    "declaration": true,
     "declarationMap": true,
     "mapRoot": "./",
-    "lib": ["dom", "dom.iterable", "esnext", "es6"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
+    "lib": [
+      "dom",
+      "esnext"
+    ],
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "removeComments": true,
+    "jsx": "react",
   },
-  "include": ["next-env.d.ts", "src/app/**/*.ts", "src/app/**/*.tsx"],
-  "exclude": ["node_modules", "__tests__"]
+  "include": [
+    "src/app/**/*.ts",
+    "src/app/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

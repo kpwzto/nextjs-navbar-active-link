@@ -19,7 +19,7 @@ And render them like this:
 ```javascript
 <Navbar>
   <ActiveLink href="/">
-    <a>Home</a>
+    Home
   </ActiveLink>
 </Navbar>
 ```
