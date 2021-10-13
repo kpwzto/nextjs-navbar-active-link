@@ -47,10 +47,11 @@ var ActiveLink = (_a) => {
   ]);
   const { asPath, pathname } = useRouter();
   const activeClassName = "active";
+  const isNode = children.type === void 0;
   const className = pathname === props.href || asPath === props.as ? activeClassName : "";
   return /* @__PURE__ */ React2.createElement("li", {
     className
-  }, /* @__PURE__ */ React2.createElement("a", __spreadValues({
+  }, !isNode && React2.cloneElement(children, __spreadValues({}, props)), isNode && /* @__PURE__ */ React2.createElement("a", __spreadValues({
     href: props.href
   }, props), children));
 };

@@ -21,6 +21,12 @@ And render them like this:
   <ActiveLink href="/">
     Home
   </ActiveLink>
+  <ActiveLink>
+    <ul>
+      <li><a href="/test-page-1">Test page 1</a></li>
+      <li><a href="/test-page-2">Test page 2</a></li>
+    </ul>
+  </ActiveLink>
 </Navbar>
 ```
 ## License

@@ -72,10 +72,11 @@ var ActiveLink = (_a) => {
   ]);
   const { asPath, pathname } = (0, import_router.useRouter)();
   const activeClassName = "active";
+  const isNode = children.type === void 0;
   const className = pathname === props.href || asPath === props.as ? activeClassName : "";
   return /* @__PURE__ */ import_react.default.createElement("li", {
     className
-  }, /* @__PURE__ */ import_react.default.createElement("a", __spreadValues({
+  }, !isNode && import_react.default.cloneElement(children, __spreadValues({}, props)), isNode && /* @__PURE__ */ import_react.default.createElement("a", __spreadValues({
     href: props.href
   }, props), children));
 };
