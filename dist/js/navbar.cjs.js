@@ -63,6 +63,7 @@ var Navbar = (_a) => {
 
 // src/app/components/ActiveLink.tsx
 var import_router = __toModule(require("next/router"));
+var import_link = __toModule(require("next/link"));
 var import_react = __toModule(require("react"));
 var ActiveLink = (_a) => {
   var _b = _a, {
@@ -76,7 +77,7 @@ var ActiveLink = (_a) => {
   const className = pathname === props.href || asPath === props.as ? activeClassName : "";
   return /* @__PURE__ */ import_react.default.createElement("li", {
     className
-  }, !isNode && import_react.default.cloneElement(children, __spreadValues({}, props)), isNode && /* @__PURE__ */ import_react.default.createElement("a", __spreadValues({
+  }, !isNode && import_react.default.cloneElement(children, __spreadValues({}, props)), isNode && /* @__PURE__ */ import_react.default.createElement(import_link.default, __spreadValues({
     href: props.href
   }, props), children));
 };

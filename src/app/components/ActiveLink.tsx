@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 import React, { FC } from 'react'
 
 interface ActiveLinkProps {
@@ -22,9 +23,9 @@ const ActiveLink: FC<ActiveLinkProps> = ({
     <li className={className}>
       {!isNode && React.cloneElement(children, { ...props })}
       {isNode && (
-        <a href={props.href} {...props}>
-          {children}
-        </a>
+        <Link href={props.href} {...props}>
+           {children}
+        </Link>
       )}
     </li>
   )

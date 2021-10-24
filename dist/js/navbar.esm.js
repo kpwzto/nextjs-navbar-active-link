@@ -38,6 +38,7 @@ var Navbar = (_a) => {
 
 // src/app/components/ActiveLink.tsx
 import { useRouter } from "next/router";
+import Link from "next/link";
 import React2 from "react";
 var ActiveLink = (_a) => {
   var _b = _a, {
@@ -51,7 +52,7 @@ var ActiveLink = (_a) => {
   const className = pathname === props.href || asPath === props.as ? activeClassName : "";
   return /* @__PURE__ */ React2.createElement("li", {
     className
-  }, !isNode && React2.cloneElement(children, __spreadValues({}, props)), isNode && /* @__PURE__ */ React2.createElement("a", __spreadValues({
+  }, !isNode && React2.cloneElement(children, __spreadValues({}, props)), isNode && /* @__PURE__ */ React2.createElement(Link, __spreadValues({
     href: props.href
   }, props), children));
 };

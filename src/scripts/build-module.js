@@ -7,7 +7,7 @@ async function buildScript( format = 'esm' ) {
     bundle     : true,
     outfile    : `./dist/js/${ name }.${ format }.js`,
     format,
-    external   : ['react', 'react-dom', 'next/router'],
+    external   : ['react', 'react-dom', 'next/router', 'next/link'],
   } );
 }
 
