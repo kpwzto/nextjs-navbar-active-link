@@ -20,7 +20,6 @@
     "url": "https://github.com/kpwzto/nextjs-navbar-active-link/issues"
   },
   "scripts": {
-    "dev": "next dev -p 3300",
     "build:module": "node ./src/scripts/build-module.js",
     "build:types": "node ./src/scripts/clean.js && tsc --emitDeclarationOnly",
     "build:all": "npm run build:module && npm run build:types",
